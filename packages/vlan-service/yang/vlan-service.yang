@@ -1,0 +1,30 @@
+module vlan-service {
+  namespace "http://example.com/vlan-service";
+  prefix vs;
+
+  import tailf-common { prefix tailf; }
+
+  organization "Example Org";
+  description "VLAN provisioning service model";
+
+  revision 2024-01-01;
+
+  container vlan-service {
+    list vlan {
+      key "name";
+      leaf name {
+        type string;
+      }
+      leaf vlan-id {
+        type uint16;
+      }
+      leaf device {
+        type string;
+      }
+
+      tailf:action create {
+        description "Create VLAN";
+      }
+    }
+  }
+}

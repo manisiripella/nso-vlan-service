@@ -1,0 +1,15 @@
+<config-template xmlns="http://tail-f.com/ns/config/1.0">
+  <devices>
+    <device>
+      <name>{$DEVICE_NAME}</name>
+      <config>
+        <ios xmlns="http://cisco.com/ns/yang/Cisco-IOS">
+          <vlan>
+            <vlan-id>{$VLAN_ID}</vlan-id>
+            <name>VLAN_{$VLAN_ID}</name>
+          </vlan>
+        </ios>
+      </config>
+    </device>
+  </devices>
+</config-template>
