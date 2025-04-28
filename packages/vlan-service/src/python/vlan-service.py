@@ -1,4 +1,4 @@
-from ncs.application import Service
+from ncs import Service
 
 class Main(Service):
     def create(self, tctx, root, service, proplist):
